@@ -92,7 +92,7 @@ def multi():
     bing_urls = multi_pic(lat, lon, tileZoom, multi, 'bing')
     google_urls = multi_pic(lat, lon, tileZoom, multi, 'google')
     osm_urls = multi_pic(lat, lon, tileZoom, multi, 'osm')
-    result = {'bing':bing_urls,'google':google_urls,'osm':osm_urls}
+    result = {'bing':bing_urls,'google':google_urls,'osm':osm_urls,'lat':lat, 'lon': lon, 'tileZoom':tileZoom, 'multi':multi}
 
     return jsonify(result)
 

@@ -10,8 +10,9 @@
 </head>
 <body>
 <div>
-
-    <button type="button" class="layui-btn layui-btn-normal" id="back">Zoom out</button>
+    <button type="button" class="layui-btn layui-btn-normal" id="zoom_in">Zoom in</button>
+    <button type="button" class="layui-btn layui-btn-normal" id="zoom_out">Zoom out</button>
+    <button type="button" class="layui-btn layui-btn-normal" id="back">back</button>
 
     <div class="layui-row" id="test2">
 
@@ -39,9 +40,50 @@
 
 			})
 
+
+
+
         let bing = getParameter("bing")
         let google = getParameter("google")
         let osm = getParameter("osm")
+        let lat = getParameter('lat')
+        let lon = getParameter("lon")
+        let tileZoom = getParameter('tileZoom')
+        let multi = getParameter('multi')
+        console.log(multi)
+
+
+        $(".zoom_in").on('click',function (){
+            $.ajax({
+                type:"get",
+                contentType: 'application/json; charset=UTF-8',
+                url:"lon=" + lon + "&lat= " + lat + "&tileZoom= " + tileZoom + "&multi=" + multi+1,
+                success:function (data) {
+
+                     var str = '';
+                    //Google
+                    str += '<div class="layui-col-xs4 layui-col-sm4 layui-col-md4">';
+                    str += '<p>Bing</p>';
+                    str += '<img src=../' + data.bing + '>';
+                    str += '</div>';
+                    //BIng
+
+                    str += '<div class="layui-col-xs4 layui-col-sm4 layui-col-md4">';
+                    str += '<p>Google</p>';
+                    str += '<img src=../' + data.google + '>';
+                    str += '</div>';
+                    //OSM
+                    str += '<div class="layui-col-xs4 layui-col-sm4 layui-col-md4">';
+                    str += '<p>OSM</p>';
+                    str += '<img src=../' + data.osm + '>';
+                    str += '</div>';
+                    location.reload()
+                     $("#test2").append(str);
+                }
+            })
+        });
+
+
         console.log(bing)
         var bing_arr = bing.split(",")
         var google_arr = google.split(",")
@@ -82,6 +124,9 @@
         str += '</div>';
 
         $("#test2").append(str);
+
+
+
 
         function getParameter(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
