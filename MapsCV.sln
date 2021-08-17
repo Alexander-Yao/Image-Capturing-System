@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapsUnderstanding", "MapsVisionsAPI\MapsUnderstanding.csproj", "{3882ADA0-0D22-48F5-8837-CB485D7FA31B}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MapsCapturing", "MapsCapturing\MapsCapturing.pyproj", "{FD8DDE05-87A3-4635-864B-4773AB9ABC60}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{787A399E-3D43-486B-BD9E-45F0332BEEE1}"
 	ProjectSection(SolutionItems) = preProject
 		Database\MapsVisionsCreateScript.sql = Database\MapsVisionsCreateScript.sql
@@ -15,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{78
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MapsUI", "MapsVisionsUI\MapsUI.njsproj", "{CBFDD76A-F554-4818-9996-3454128458E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsTestBed", "MapsTestBed\MapsTestBed.csproj", "{AB245D72-C922-4771-A995-2A8F57CE5F8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapsTestBed", "MapsTestBed\MapsTestBed.csproj", "{AB245D72-C922-4771-A995-2A8F57CE5F8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +25,6 @@ Global
 		{3882ADA0-0D22-48F5-8837-CB485D7FA31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3882ADA0-0D22-48F5-8837-CB485D7FA31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3882ADA0-0D22-48F5-8837-CB485D7FA31B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD8DDE05-87A3-4635-864B-4773AB9ABC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD8DDE05-87A3-4635-864B-4773AB9ABC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBFDD76A-F554-4818-9996-3454128458E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBFDD76A-F554-4818-9996-3454128458E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBFDD76A-F554-4818-9996-3454128458E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
